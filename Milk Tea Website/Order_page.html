@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+   <style>
+  
+.orderItem {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+   
+}
+
+
+.orderItem img {
+    max-width: 50%; 
+    height: 50%;
+    
+}
+.orderItem {
+    margin-right: 20px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block; 
+    vertical-align: top;
+    width: calc(50% - 20px); 
+    box-sizing: border-box; 
+    align-items: center;
+    align-content: center;
+}
+   </style>
+</head>
+<body>
+    
+    <div class="orderContainer">
+      
+        <div id="orderDetails"></div>
+    </div>
+    <script>
+    
+        function calculateTotalPrice(orders) {
+            var totalPrice = 0;
+            for (var i = 0; i < orders.length; i++) {
+                totalPrice += parseFloat(orders[i].price.replace('₱', '')) * orders[i].quantity;
+            }
+            return totalPrice.toFixed(2); 
+        }
+    
+        
+        var orders = JSON.parse(sessionStorage.getItem('orders')) || [];
+    
+        
+        function updateQuantity(index, quantity) {
+            orders[index].quantity = quantity;
+            sessionStorage.setItem('orders', JSON.stringify(orders));
+            location.reload(); 
+        }
+    
+        
+        var orderDetailsElement = document.getElementById('orderDetails');
+        if (orders.length > 0) {
+    var orderListHTML = "<h1>Your Order Details</h1><br><div> <h3>Please choose quantity of your order to calculate the total amount</h3></div>";
+    for (var i = 0; i < orders.length; i++) {
+        orderListHTML += "<div class='orderItem'>" +
+                            "<img src='" + orders[i].image + "' alt='" + orders[i].name + "'><br>" +
+                            "<div>" + 
+                                "<p>Milk Tea: " + orders[i].name + "</p>" + 
+                                "<p>Price: " + orders[i].price + "</p><br>" + 
+                                "<h4>Quantity:</h4>" + 
+                                "<input type='number' value='" + (orders[i].quantity || 0) + "' min='0' onchange='updateQuantity(" + i + ", this.value)'>" +
+                            "</div>" +
+                        "</div>";
+    }
+            orderListHTML += "<p>Total Price: ₱" + calculateTotalPrice(orders) + "</p>" +
+                             "<button onclick='proceedToPayment()'>Proceed to Payment</button>";
+            orderDetailsElement.innerHTML = orderListHTML;
+        } else {
+            orderDetailsElement.innerHTML = "<p>No orders yet</p>";
+        }
+    
+       
+        function proceedToPayment() {
+            window.location.href = "Payment.html";
+        }
+    </script>
+    
+</body>
+</html>

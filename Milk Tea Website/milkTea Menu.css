@@ -1,0 +1,354 @@
+*{
+    font-family: 'Poppins',sans-serif;
+    align-content: center;
+}
+
+h2{
+    color: #05282c;
+    
+}
+header{
+  background-color: #217e47;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    z-index: 1000; 
+    margin: 0; 
+    box-sizing: border-box; 
+  }
+  .banner img{
+    padding-top: 80px;
+    height: 100%;
+    width: 100%;
+    
+}
+.logo{
+   
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+    height: 150px;
+    padding-bottom: 20px;
+  
+}
+.logo img{
+    margin-right: 40px;
+    max-width: 100%;
+    max-height: 100%;
+}
+.logo span{
+    font-weight: bold;
+    font-size: 40px;
+   
+}
+
+nav {
+    flex: 1; 
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+   
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+}
+
+nav ul li {
+    margin-left: 30px; 
+
+}
+
+nav ul li a {
+   
+    margin-top: 20px;
+    text-decoration: none;
+    color: #ffffff; 
+    margin-right: 20px;
+    
+    
+}
+nav ul li a:hover{
+    color: #ffffff77;
+    
+}
+nav ul li a.active {
+    color: #ffffff77;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+#profile {
+    width: 50px; 
+    height: 50px;
+}
+#profile:hover{
+    transform: scale(1.3);
+
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .logo span{
+        font-weight: bold;
+        font-size: 40px;
+        margin-right: 20px;
+    }
+    
+    nav {
+        margin-bottom: 10px;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        list-style-type: none;
+        margin: 0;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    .banner img{
+        padding-top: 170px;
+        height: 100%;
+        width: 100%;
+        
+    }
+}
+
+
+.bodyContent{
+    margin-top: 70px;
+    display: flex;
+    align-content: space-between;
+    width: 100%;
+    height: auto;
+    
+    
+}
+.sidebar{
+    width: 20%;
+    height: auto;
+    text-align: left;
+    
+}
+
+.sidebar .nav2 ul{
+    display: list-item;
+    color: black;
+    
+}
+.nav2 ul li{
+    margin-bottom: 10px;
+}
+.sidebar .nav2 ul li a{
+    color: #4e3c2e;
+     text-decoration: none;
+     font-size: 20px;
+  
+}
+.sidebar .nav2 ul li a:hover{
+    color: #4e3c2e9f;
+}
+.sidebar h3{
+    margin-left: 10px;
+    color: #05282c;
+}
+.DisplayDrinks {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+  
+  .DisplayDrinks .FirstTea {
+    height: 320px;
+    width: 250px;
+    background-color: white;
+    margin: 5px;
+    
+  }
+  
+  .DisplayDrinks .FirstTea img {
+  
+    width: 70%; 
+    height: auto; 
+  }
+  .DisplayDrinks .FirstTea p{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .DisplayDrinks .FirstTea h4{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .DisplayDrinks .FirstTea button{
+    background-color: #065e68;
+   color: white;
+   border: none;
+   border-radius: 15px;
+   height: 30px;
+   width: 100px;
+  }
+.active{
+    color: #033a41;
+    font-weight: bold;
+}
+footer{
+    background-color: #217e47;
+    margin-top: 70px;
+}
+.containerFooter{
+    display: flex;
+    justify-content: center;
+   align-content: space-between;
+   
+}
+
+#footerLogo{
+    width: 70px; 
+    height: auto; 
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.child1{
+   width: 30%;
+   height: auto;
+   padding: 20px;
+   
+}
+.child2{
+    padding: 20px;
+   width: 30%;
+   height: auto;
+   text-align: left;
+ 
+}
+.child3{
+    padding: 50px;
+   width: 30%;
+   height: auto;
+
+}
+.child3 a{
+    text-decoration: none;
+}
+.child1 h4{
+    font-weight: bold;
+    
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+   
+}
+h5{
+    color: white;
+   
+}
+footer p{
+   
+    font-size: 12px;
+    color: white;
+}
+.icons{
+   
+    width: 30px;
+    height: auto;
+    margin-left: 40px;
+}
+.icons:hover {
+    transform: scale(1.2); 
+}
+#More{
+    color: #4e3c2e;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+#More:hover{
+    color: #4e3c2ea2;
+}
+  
+@media only screen and (max-width: 600px) {
+    .bodyContent {
+      display: flex;
+      flex-direction: column;
+      padding-top: 100px;
+    }
+  
+    .sidebar {
+      width: 100%;
+    }
+  
+    .DisplayDrinks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .FirstTea {
+      width: 50%; 
+    }
+  
+    .FirstTea img {
+      width: 100%;
+      height: auto; 
+    }
+  }
+  
+ 
+  @media only screen and (min-width: 601px) {
+    .bodyContent {
+      display: flex;
+     
+    }
+  
+    .sidebar {
+      width: 250px; 
+    }
+  
+    .DisplayDrinks {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .FirstTea {
+      width: 150px; 
+      margin: 10px; 
+    }
+  
+    .FirstTea img {
+      width: 100%; 
+      height: auto; 
+    }
+  }
+  .active{
+    color: #033a41;
+    font-weight: bold;
+}

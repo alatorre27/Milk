@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <h1>Payment</h1>
+    
+    <div id="orderDetails"></div>
+
+    <div id="paymentOptions">
+      
+    </div>
+
+    <button onclick="confirmPayment()">Confirm Payment</button>
+
+    <script>
+        
+        var orders = JSON.parse(sessionStorage.getItem('orders')) || [];
+        var totalPrice = calculateTotalPrice(orders);
+
+        function calculateTotalPrice(orders) {
+            var totalPrice = 0;
+            for (var i = 0; i < orders.length; i++) {
+                totalPrice += parseFloat(orders[i].price.replace('₱', '')) * orders[i].quantity;
+            }
+            return totalPrice.toFixed(2); 
+        }
+
+        
+        function displayOrderDetails() {
+            var orderDetailsHTML = "<h2>Your Order Details</h2>";
+            for (var i = 0; i < orders.length; i++) {
+                orderDetailsHTML += "<div class='orderItem'>" +
+                                    "<p>Milk Tea: " + orders[i].name + "</p>" +
+                                    "<p>Quantity: " + orders[i].quantity + "</p>" +
+                                    "</div>";
+            }
+            orderDetailsHTML += "<p>Total Price: ₱" + totalPrice + "</p>";
+            document.getElementById('orderDetails').innerHTML = orderDetailsHTML;
+        }
+        displayOrderDetails();
+
+        
+        function confirmPayment() {
+           
+            sessionStorage.removeItem('orders');
+            alert("Payment confirmed. Thank you for your order!");
+            window.location.href = "milkTea Menu.html"; 
+        }
+    </script>
+</body>
+</html>

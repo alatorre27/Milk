@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu: Frappe</title>
+    
+    <link rel="stylesheet" href="milkTea Menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+  <script>
+    function orderMilkTea(milkTeaName, price, image) {
+       
+        var orders = JSON.parse(sessionStorage.getItem('orders')) || [];
+
+       
+        orders.push({ name: milkTeaName, price: price, image: image });
+
+        sessionStorage.setItem('orders', JSON.stringify(orders));
+
+       
+        alert(milkTeaName + " added to Cart");
+
+       
+        window.location.href = "Frappe Menu.html";
+    }
+</script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/Bubble Tea Logo.png">
+            <span>Bubble Milk Tea</span>
+        </div>
+
+        <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="milkTea Home.html">Home</a></li>
+                <li><a href="milkTea Menu.html">Menu</a></li>
+                <li><a href="Order_page.html">Cart</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                
+       
+            </ul>
+        <img src="img/profile.jpg" id="profile">
+           
+        </nav>
+       
+    </div>
+    </header>
+
+</div>
+</header>
+<div class="banner">
+    <img src="img/Banner.jpg">
+</div>
+<div class="bodyContent">
+
+    <div class="sidebar">
+    <h3>Menu</h3>
+
+
+        <nav class="nav2">
+            <ul>
+                <li><a href="milkTea Menu.html">Milk Tea</a></li>
+                <li><a href="Signature Latte Menu.html">Signature Latte</a></li>
+                <li  class="active"><a href="Frappe.html">Frappe</a></li>
+                
+              
+            </ul>
+        </nav>
+      
+        </div>
+      
+       <div class="DisplayDrinks">
+        
+        <div class="FirstTea">
+            <center>
+                <img src="img/Chessecake Frappe.jpg">
+                <p>Chessecake Frappe</p>
+                <h4>₱50.00</h4>
+                <button onclick="orderMilkTea('Chessecake Frappe', '₱50.00', 'img/Chessecake.jpg')">Order</button>
+        </center>
+            </center>
+        </div>
+        <div class="FirstTea">
+            <center>
+                <img src="img/Double Choco Frappe.jpg">
+                <p>Double Choco Frappe</p>
+                <h4>₱50.00</h4>
+                <button onclick="orderMilkTea('Double Choco Frappe', '₱50.00', 'img/Double Choco Frappe.jpg')">Order</button>
+        </center>
+            </center>
+        </div>
+    <div class="FirstTea">
+            <center>
+                <img src="img/Matcha Frappe.jpg">
+                <p>Matcha Frappe</p>
+                <h4>₱50.00</h4>
+                <button onclick="orderMilkTea('Matcha Frappe', '₱50.00', 'img/Matcha Frappe.jpg')">Order</button>
+            </center>
+        </div>
+        <div class="FirstTea">
+            <center>
+                <img src="img/Cookies & Cream Frappe.jpg">
+                <p>Cookies & Cream Frappe</p>
+                <h4>₱50.00</h4>
+                <<button onclick="orderMilkTea('Cookies & Cream Frapp', '₱50.00', 'img/Cookies & Cream Frapp.jpg')">Order</button>
+            </center>
+        </div>
+        <div class="FirstTea">
+            <center>
+                <img src="img/Coffe Latte Frappe.jpg">
+                <p>Coffe Latte Frappe</p>
+                <h4>₱50.00</h4>
+                <button onclick="orderMilkTea('Coffe Latte Frappe', '₱50.00', 'img/Coffe Latte Frappe.jpg')">Order</button>
+            </center>
+        </div>
+        <div class="FirstTea">
+            <center>
+                <img src="img/Rocky Road Frappe.jpg">
+                <p>Rocky Road Frappe/p>
+                <h4>₱50.00</h4>
+                <button onclick="orderMilkTea('Rocky Road Frappe', '₱50.00', 'img/Rocky Road Frappe.jpg')">Order</button>
+            </center>
+        </div>
+        <div class="FirstTea">
+            <center>
+                <img src="img/Cheesy Mango Frappe.jpg">
+                <p>Cheesy Mango Frappe</p>
+                <h4>₱50.00</h4>
+                <button onclick="orderMilkTea('Cheesy Mango Frappe', '₱50.00', 'img/Cheesy Mango Frappe.jpg')">Order</button>
+            </center>
+        </div>
+        <div class="FirstTea">
+            <center>
+                <img src="img/Red Velvet Frappe.jpg">
+                <p>Red Velvet Frappe</p>
+                <h4>₱50.00</h4>
+                <button onclick="orderMilkTea('Red Velvet Frappe', '₱50.00', 'img/Red Velvet Frappe.jpg')">Order</button>
+            </center>
+        </div>
+       </div>
+       
+
+    </div>
+    <footer>
+        <div class="containerFooter">
+            <div class="child1">
+               <img src="img/Bubble Tea Logo.png" id="footerLogo">
+             <h4>Bubble Milk Tea</h4>
+ 
+ 
+          </div>
+ 
+          <div class="child2">
+          <h5>Contact Us </h5>
+          <p>Number: 09123557799<br>
+             Email: bubblemilktea@gmail.com<br>
+       
+          <h5>Address:</h5>
+          <p>Bubog Jolo, San Jose,<br>
+             Occidental Mindoro, Philippines</p>
+ 
+          </div>
+ 
+          <div class="child3">
+             <a href="https://www.facebook.com" target="_blank">
+                 <img src="img/facebook.png" class="icons" alt="Facebook">
+             </a>
+             
+             <a href="https://www.instagram.com" target="_blank">
+                 <img src="img/instagram.png" class="icons" alt="Instagram">
+             </a>
+      
+             <a href="mailto:your-email@gmail.com">
+                 <img src="img/gmail.png" class="icons" alt="Email">
+             </a>
+             
+          </div>
+        </div>
+     </footer>
+
+</body>
+</html>

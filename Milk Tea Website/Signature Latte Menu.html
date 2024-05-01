@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu: Signature Latte</title>
+    
+    <link rel="stylesheet" href="milkTea Menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+  <script>
+    function orderMilkTea(milkTeaName, price, image) {
+       
+        var orders = JSON.parse(sessionStorage.getItem('orders')) || [];
+
+       
+        orders.push({ name: milkTeaName, price: price, image: image });
+
+        sessionStorage.setItem('orders', JSON.stringify(orders));
+
+       
+        alert(milkTeaName + " added to Cart");
+
+       
+        window.location.href = "Signature Latte Menu.html";
+    }
+</script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/Bubble Tea Logo.png">
+            <span>Bubble Milk Tea</span>
+        </div>
+
+        <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="milkTea Home.html">Home</a></li>
+                <li><a href="milkTea Menu.html">Menu</a></li>
+                <li><a href="Order_page.html">Cart</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                
+       
+            </ul>
+        <img src="img/profile.jpg" id="profile">
+           
+        </nav>
+       
+    </div>
+    </header>
+</div>
+</header>
+<div class="banner">
+    <img src="img/Banner.jpg">
+</div>
+<div class="bodyContent">
+
+    <div class="sidebar">
+    <h3>Menu</h3>
+
+        <nav class="nav2">
+            <ul>
+                <li><a href="milkTea Menu.html">Milk Tea</a></li>
+                <li  class="active"><a href="Signature Latte Menu.html">Signature Latte</a></li>
+                <li><a href="Frappe.html">Frappe</a></li>
+                
+              
+            </ul>
+        </nav>
+      
+        </div>
+      
+       <div class="DisplayDrinks">
+        
+        <div class="FirstTea">
+            <center>
+                <img src="img/Strawberry.png">
+                <p>Strawberry Latte</p>
+                <h4>₱39.00</h4>
+                <button onclick="orderMilkTea('Strawberry', '₱39.00', 'img/Strawberry.png')">Order</button>
+        </center>
+            </center>
+        </div>
+        <div class="FirstTea">
+            <center>
+                <img src="img/Blueberry.png">
+                <p>Chocolate Milk Tea</p>
+                <h4>₱39.00</h4>
+                <button onclick="orderMilkTea('Chocolate Milk Tea', '₱39.00', 'img/Chocolate.png')">Order</button>
+        </center>
+            </center>
+        </div>
+        <div class="FirstTea">
+            <center>
+                <img src="img/Mango.png">
+                <p>Okinawa Milk Tea</p>
+                <h4>₱39.00</h4>
+                <<button onclick="orderMilkTea('Okinawailk Tea', '₱39.00', 'img/Okinawa.png')">Order</button>
+            </center>
+        </div>
+        <div class="FirstTea">
+            <center>
+                <img src="img/Ube.png">
+                <p>Matcha Milk Tea</p>
+                <h4>₱39.00</h4>
+                <button onclick="orderMilkTea('Matcha Milk Tea', '₱39.00', 'img/Matcha.png')">Order</button>
+            </center>
+        </div>
+        <div class="FirstTea">
+            <center>
+                <img src="img/Mix Berries.png">
+                <p>Hokkaido Milk Tea</p>
+                <h4>₱39.00</h4>
+                <button onclick="orderMilkTea('Hokkaido Milk Tea', '₱39.00', 'img/Hokkaido.png')">Order</button>
+            </center>
+        </div>
+        <div class="FirstTea">
+            <center>
+                <img src="img/Avocado Latte.png">
+                <p>Avocado Latte/p>
+                <h4>₱39.00</h4>
+                <button onclick="orderMilkTea('Avocado Latte', '₱39.00', 'img/Avocado Latte.png')">Order</button>
+            </center>
+        </div>
+        <div class="FirstTea">
+            <center>
+                <img src="img/Buko Pandan.png">
+                <p>Buko Pandan Latte</p>
+                <h4>₱39.00</h4>
+                <button onclick="orderMilkTea('Buko Pandan', '₱39.00', 'img/Buko Pandan.png')">Order</button>
+            </center>
+        </div>
+        <div class="FirstTea">
+            <center>
+                <img src="img/Melon Latte.png">
+                <p>Melon Latte</p>
+                <h4>₱39.00</h4>
+                <button onclick="orderMilkTea('Melon Latte', '₱39.00', 'img/Melon Latte.png')">Order</button>
+            </center>
+        </div>
+       </div>
+       
+
+    </div>
+    <footer>
+        <div class="containerFooter">
+            <div class="child1">
+               <img src="img/Bubble Tea Logo.png" id="footerLogo">
+             <h4>Bubble Milk Tea</h4>
+ 
+ 
+          </div>
+ 
+          <div class="child2">
+          <h5>Contact Us </h5>
+          <p>Number: 09123557799<br>
+             Email: bubblemilktea@gmail.com<br>
+       
+          <h5>Address:</h5>
+          <p>Bubog Jolo, San Jose,<br>
+             Occidental Mindoro, Philippines</p>
+ 
+          </div>
+ 
+          <div class="child3">
+             <a href="https://www.facebook.com" target="_blank">
+                 <img src="img/facebook.png" class="icons" alt="Facebook">
+             </a>
+             
+             <a href="https://www.instagram.com" target="_blank">
+                 <img src="img/instagram.png" class="icons" alt="Instagram">
+             </a>
+      
+             <a href="mailto:your-email@gmail.com">
+                 <img src="img/gmail.png" class="icons" alt="Email">
+             </a>
+             
+          </div>
+        </div>
+     </footer>
+
+</body>
+</html>
